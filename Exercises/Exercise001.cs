@@ -23,8 +23,9 @@ namespace Exercises
 
         public double AddVat(double originalPrice, double vatRate)
         {
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+           // Returns the price with VAT added, rounded to 2 dp
+
+            return Math.Round(originalPrice + ((vatRate/100) * originalPrice),2);
         }
 
         public string Reverse(string sentence)
