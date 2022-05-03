@@ -8,8 +8,10 @@ namespace Exercises
     {
         public string CapitalizeWord(string word)
         {
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+            // Capitalises the first letter of the input string and returns the result
+
+            return string.Concat(word[0].ToString().ToUpper(), word[1..]);
+
         }
 
         public string GenerateInitials(string firstName, string lastName)
