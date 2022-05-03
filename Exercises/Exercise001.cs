@@ -16,8 +16,9 @@ namespace Exercises
 
         public string GenerateInitials(string firstName, string lastName)
         {
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+            // Returns initials separated by a full stop character
+
+            return string.Concat(firstName[0], ".", lastName[0]);
         }
 
         public double AddVat(double originalPrice, double vatRate)
