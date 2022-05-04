@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Exercises.Tests": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}

@@ -10,8 +10,8 @@ namespace Exercises
         {
             // Capitalises the first letter of the input string and returns the result
 
-            return string.Concat(word[0].ToString().ToUpper(), word[1..]);
-
+            //return string.Concat(word[0].ToString().ToUpper(), word[1..]);
+            return char.ToUpper(word[0]) + word[1..];
         }
 
         public string GenerateInitials(string firstName, string lastName)
@@ -30,14 +30,27 @@ namespace Exercises
 
         public string Reverse(string sentence)
         {
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+            // Strings are immutable, character arrays can be changed
+            // We can apply array methods to a character array
+
+            char[] sentenceArray =  sentence.ToCharArray();  //string has method to change to char array
+            Array.Reverse(sentenceArray);
+
+           
+            return new string(sentenceArray);  //Need to use string constructor
+
         }
 
         public int CountLinuxUsers(List<User> users)
         {
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+            int count = 0;
+            foreach (User thisUser in users)
+            {
+                if (thisUser.Type == "Linux") count++;  // Class User defined in Exercises.Models.User
+                
+            }
+
+            return count;
         }
     }
 }
