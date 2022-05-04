@@ -41,6 +41,16 @@ namespace Exercises.Tests
         }
 
         [Test]
+        public void Given_NonExistent_Icecream_GetIceCreamCode_Should_Return_Negative_1()
+        {
+            string iceCreamFlavour = "Rum And Raisin";
+            int expectedCode = -1;
+
+            Exercise003.IceCreamCode(iceCreamFlavour).Should().Be(expectedCode);
+        }
+
+
+        [Test]
         public void Ice_Cream_Flavours_Should_Return_All_Flavours()
         {
             string[] expected = { "Pistachio", "Raspberry Ripple", "Vanilla", "Mint Chocolate Chip", "Chocolate", "Mango Sorbet" };
