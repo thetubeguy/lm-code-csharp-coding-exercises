@@ -29,5 +29,13 @@ namespace Exercises.Tests
             DateTime expectedResult = new(2052, 10, 3, 1, 46, 39);
             actualResult.Should().Be(expectedResult);
         }
+
+        [Test]
+        public void AddGigaSecond_Should_Return_MinTime_When_DateTime_Upper_Limit_Exceeded()
+        {
+            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(9990,12,31,23,59,59,0));
+            DateTime expectedResult = new(0001, 1, 1, 0, 0, 0, 0);
+            actualResult.Should().Be(expectedResult);
+        }
     }
 }
