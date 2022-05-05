@@ -7,9 +7,11 @@ namespace Exercises
         {
             ulong gigaSec = ((ulong)Math.Pow(10,9));  //Would be better to make this constant for execution speed
             DateTime newdateTime;
-            ulong maxticks = ((ulong)DateTime.MaxValue.Ticks) - (gigaSec * 1000 * 10000);  // 1000 ms in a second   10000 ticks in a ms
+            TimeSpan myspan = TimeSpan.FromSeconds(gigaSec);
 
-            if (((ulong)dateTime.Ticks) <= maxticks)
+            DateTime maxdate = DateTime.MaxValue - myspan;
+
+            if (dateTime <= maxdate)
             {
                 newdateTime = dateTime.AddSeconds(gigaSec);
             }
