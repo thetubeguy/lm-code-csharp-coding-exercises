@@ -3,24 +3,20 @@ namespace Exercises
 {
     public class Exercise004
     {
-        public static DateTime AddGigaSecond(DateTime dateTime)
+        public static DateTime AddGigaSecond(DateTime datetime)
         {
-            ulong gigaSec = ((ulong)Math.Pow(10,9));  //Would be better to make this constant for execution speed
-            DateTime newdateTime;
-            TimeSpan myspan = TimeSpan.FromSeconds(gigaSec);
+            double gigasec = Math.Pow(10,9); 
+            TimeSpan gigasecspan = TimeSpan.FromSeconds(gigasec);
+            DateTime maxdate = DateTime.MaxValue - gigasecspan;
 
-            DateTime maxdate = DateTime.MaxValue - myspan;
-
-            if (dateTime <= maxdate)
+            if (datetime <= maxdate)
             {
-                newdateTime = dateTime.AddSeconds(gigaSec);
+                return (datetime.AddSeconds(gigasec));
             }
             else
             {
-                newdateTime = new DateTime(0001, 1, 1, 0, 0, 0, 0);
+                return (new DateTime(0001, 1, 1, 0, 0, 0, 0));
             }
- 
-            return newdateTime;
         }
     }
 }

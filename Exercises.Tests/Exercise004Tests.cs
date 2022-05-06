@@ -15,6 +15,14 @@ namespace Exercises.Tests
         }
 
         [Test]
+        public void AddGigaSecond_Should_Return_Result_When_MilliSeconds_Omitted()
+        {
+            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(1976, 4, 13, 15,40,40));
+            DateTime expectedResult = new(2007,12,21,17,27,20);
+            actualResult.Should().Be(expectedResult);
+        }
+
+        [Test]
         public void AddGigaSecond_Should_Return_Result_When_DateTime_Is_Specified()
         {
             DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(2021, 3, 4, 23, 22, 0, 0));
@@ -41,8 +49,8 @@ namespace Exercises.Tests
         [Test]
         public void AddGigaSecond_Should_Return_Result_When_DateTime_At_Upper_Limit()
         {
-            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(9968, 04, 23, 22, 13, 19, 0));
-            DateTime expectedResult = new(9999, 12, 31, 23, 59, 59, 0);
+            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(9968, 04, 23, 22, 13, 19, 999));
+            DateTime expectedResult = new(9999, 12, 31, 23, 59, 59, 999);
             actualResult.Should().Be(expectedResult);
         }
     }
