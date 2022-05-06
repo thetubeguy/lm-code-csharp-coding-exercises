@@ -1,27 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+
 namespace Exercises
 {
     public class Exercise005
     {
         public bool IsPangram(string input)
         {
+            const int NUM_LETTERS_IN_ALPHABET = 26;
+
             List<char> letterlist = new List<char>();
-            char upperchar = '-';
+
             foreach (char thischar in input)
             {
-                if (Char.IsLetter(thischar))
+                if (char.IsLetter(thischar))
                 {
-                    upperchar = Char.ToUpper(thischar);
+                    char upperchar = char.ToUpper(thischar);
                     if (!letterlist.Contains(upperchar))
                         letterlist.Add(upperchar);
                 }
             }
-            if(letterlist.Count == 26)
-                return true;
-            else
-                return false;
-
+            return (letterlist.Count == NUM_LETTERS_IN_ALPHABET);
+            
         }
     }
 }
