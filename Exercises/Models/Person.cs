@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Exercises.Models
+﻿namespace Exercises.Models
 {
     public class Person
     {
-        public Person(string firstname, string lastname, string city, int age)
+        public Person(string firstName, string lastName, string city, int age)
         {
-            FirstName = firstname;
-            LastName = lastname;
+            FirstName = firstName;
+            LastName = lastName;
             City = city;
-            Age = age; 
+            Age = age;
         }
 
         public string FirstName { get; set; }

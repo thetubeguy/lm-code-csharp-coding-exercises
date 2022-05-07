@@ -1,6 +1,6 @@
-﻿using NUnit.Framework;
+﻿using Exercises.Models;
 using FluentAssertions;
-using Exercises.Models;
+using NUnit.Framework;
 using System.Collections.Generic;
 
 namespace Exercises.Tests

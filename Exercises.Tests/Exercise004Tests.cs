@@ -1,5 +1,5 @@
-﻿using NUnit.Framework;
-using FluentAssertions;
+﻿using FluentAssertions;
+using NUnit.Framework;
 using System;
 
 namespace Exercises.Tests
@@ -17,8 +17,8 @@ namespace Exercises.Tests
         [Test]
         public void AddGigaSecond_Should_Return_Result_When_MilliSeconds_Omitted()
         {
-            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(1976, 4, 13, 15,40,40));
-            DateTime expectedResult = new(2007,12,21,17,27,20);
+            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(1976, 4, 13, 15, 40, 40));
+            DateTime expectedResult = new(2007, 12, 21, 17, 27, 20);
             actualResult.Should().Be(expectedResult);
         }
 
@@ -41,7 +41,7 @@ namespace Exercises.Tests
         [Test]
         public void AddGigaSecond_Should_Return_MinTime_When_DateTime_Upper_Limit_Exceeded()
         {
-            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(9990,12,31,23,59,59,0));
+            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(9990, 12, 31, 23, 59, 59, 0));
             DateTime expectedResult = new(0001, 1, 1, 0, 0, 0, 0);
             actualResult.Should().Be(expectedResult);
         }

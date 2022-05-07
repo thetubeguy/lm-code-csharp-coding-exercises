@@ -1,5 +1,4 @@
-﻿using System;
-namespace Exercises.Models
+﻿namespace Exercises.Models
 {
     public class User
     {

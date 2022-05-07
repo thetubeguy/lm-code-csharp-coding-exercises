@@ -1,5 +1,4 @@
-﻿using System;
-using Exercises.Models;
+﻿using Exercises.Models;
 
 namespace Exercises
 {
@@ -8,13 +7,13 @@ namespace Exercises
         public bool IsFromManchester(Person person)
         {
             return (person.City == "Manchester");
-    
+
         }
 
         public bool CanWatchFilm(Person person, int ageLimit)
         {
             return (person.Age >= ageLimit);
-          
+
         }
     }
 }
