@@ -1,5 +1,6 @@
 ﻿using Exercises.Models;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace Exercises
@@ -26,16 +27,15 @@ namespace Exercises
 
         public string Reverse(string sentence)
         {
-            char[] sentenceArray = sentence.ToCharArray();
-            Array.Reverse(sentenceArray);
-
-            return new string(sentenceArray);
+           
+            return string.IsNullOrEmpty(sentence) ?
+               sentence : new string(sentence.Reverse().ToArray());
 
         }
 
         public int CountLinuxUsers(List<User> users)
         {
-            return users.FindAll(user => user.Type == "Linux").Count;
+            return users.Count(user => user.Type == "Linux");
 
         }
     }

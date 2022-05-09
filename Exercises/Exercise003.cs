@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using System;
 namespace Exercises
 {
     public class Exercise003
@@ -7,7 +7,7 @@ namespace Exercises
 
         public int IceCreamCode(string icecreamFlavour)
         {
-            return IceCreamFlavours.ToList().FindIndex(flavour => flavour == icecreamFlavour);
+            return Array.IndexOf(IceCreamFlavours, icecreamFlavour);
 
         }
     }

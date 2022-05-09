@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System;
+using System.Linq;
 
 namespace Exercises
 {
@@ -6,22 +8,9 @@ namespace Exercises
     {
         public bool IsPangram(string input)
         {
-            const int NUM_LETTERS_IN_ALPHABET = 26;
+            String alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-            List<char> letterList = new List<char>();
-
-            foreach (char thisChar in input)
-            {
-                if (char.IsLetter(thisChar))
-                {
-                    char upperChar = char.ToUpper(thisChar);
-                    if (!letterList.Contains(upperChar))
-                    {
-                        letterList.Add(upperChar);
-                    }
-                }
-            }
-            return (letterList.Count == NUM_LETTERS_IN_ALPHABET);
+            return alphabet.All(l => input.ToLower().Contains(l));
 
         }
     }
